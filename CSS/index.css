@@ -1,0 +1,23 @@
+div p span{
+
+    font-size: 36px;
+
+}
+div.div1.div2{
+    background-colorcolor: red;
+}
+h4,span{
+    background-color: aliceblue;
+}
+a[href='page.html']{
+    background-color: blueviolet;
+}
+p:last-child{
+    background-color: cornflowerblue;
+}
+p:nth-child(4){
+    background-color: darkgreen;
+}
+a+p{
+    background-color: darkseagreen;
+}

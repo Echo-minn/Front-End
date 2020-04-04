@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>盒子模型</title>
+</head>
+<body>
+<style media="screen">
+    #box {
+        width: 100px;
+        height: 100px;
+        background: red;
+        left: 30%;
+        top: 30%
+    }
+</style>
+
+
+<div id="box" style="margin: 10%"></div>
+
+<script>
+    var box = document.getElementById('box');
+    console.log(box.getBoundingClientRect());
+    // x: 8, y: 8, width: 100, height: 100, top: 8, left 8, bottom: 108, right: 108
+    console.log(window.getComputedStyle(box).width);//100px有单位
+    console.log(box.style.margin);//20%，注意样式名需要完全一致
+    console.log(box.getBoundingClientRect().width)//100无单位
+</script>
+
+<div style="background-color: pink;width: 300px;height: 300px">
+    <div style="background-color:palevioletred;width: 80px;height: 80px"></div>
+    <div style="background-color: deeppink;width: 80px;height: 80px;margin: 10%"></div>
+    <tr>
+        <div style="background-color: hotpink;width: 80px;height: 80px; border: antiquewhite;margin: 10%;padding: 10%"></div>
+    </tr>
+    <tr>
+        <div style="background-color: hotpink;width: 80px;height: 80px; border: antiquewhite;margin: 10%;padding: 10%"></div>
+    </tr>
+</div>
+
+</body>
+</html>
